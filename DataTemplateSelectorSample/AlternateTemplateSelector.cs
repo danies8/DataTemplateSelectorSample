@@ -13,7 +13,7 @@ namespace DataTemplateSelectorSample
         public string OddTemplate { get; set; }
         public string EvenTemplate { get; set; }
 
-        public override DataTemplate SelectTemplate(object item, DependencyObject container)
+        public override DataTemplate SelectTemplate(object item, DependencyObject container) 
         {
             return (DataTemplate)((FrameworkElement)container).FindResource(
                 (int)item % 2 == 0 ? EvenTemplate : OddTemplate);
